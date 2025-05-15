@@ -20,14 +20,14 @@ steps:
 
 - script: |
     npm test
-  displayname: 'npm test'
+  displayName: 'npm test'
 
 - task: CopyFiles@2
   inputs:
     sourceFolder: '$(Build.SourcesDirectory)'
     contents: |
-       src/*
-       public/*
+      src/*
+      public/*
     targetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Copy project files'
 
